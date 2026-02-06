@@ -1,0 +1,208 @@
+body {
+  background: linear-gradient(135deg, #e9ddff, #cdb4f6);
+  font-family: 'Arial', sans-serif;
+  color: #3b136f;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 40px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 15px 30px rgba(123, 75, 183, 0.25);
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.intro {
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+button {
+  background-color: #d6b4ff;
+  color: #3b136f;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0dcff;
+}
+
+#message {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.photos {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f3edff;
+  border-radius: 18px;
+}
+
+.photos img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/*left side*/
+.content {
+  flex: 1;
+}
+
+/*right side*/
+.cloud {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(123, 75, 183, 0.2);
+  font-size: 0.95em;
+  color: #3b136f;
+}
+
+/*signature cloud*/
+.cloud.signature {
+  background: f0e6ff;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .prayer-clouds {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 80px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(123, 75, 183, 0.15);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 25%;
+  background: #f3ecff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* CENTER FRAME */
+.center-frame {
+  width: 40%;
+  background: #faf7ff;
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* PHOTO */
+.photo-frame {
+  margin-top: 20px;
+}
+
+.photo-frame img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+}
+
+/* RIGHT CLOUDS */
+.prayer-clouds {
+  width: 25%;
+}
+
+.cloud {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.floating-decoration {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.floating-decoration.left {
+  left: 60px;
+}
+
+.cloud-number {
+  background: white;
+  color: #7b4bb7;
+  font-size: 64px;
+  font-weight: bold;
+  padding: 30px 45px;
+  border-radius: 60px;
+  box-shadow: 0 15px 40px rgba(123, 75, 183, 0.2);
+}
+
+.floating-decoration.right {
+  right: 60px;
+  top: 55%;
+}
+
+.floating-decoration.right img {
+  width: 300px;
+  opacity: 0.85;
+}
+
+@keyframes float {
+  0% { transform: translateY(-50%) translateY(0); }
+  50% { transform: translateY(-50%) translateY(-15px); }
+  100% { transform: translateY(-50%) translateY(0); }
+}
+
+.floating-decoration {
+  animation: float 6s ease-in-out infinite;
+}
+
+img {
+  display: block;
+}
